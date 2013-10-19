@@ -103,7 +103,7 @@ $$ \cos kd = \cos[ \frac{2 \pi}{\lambda} d ] = 0 $$
 であれば良いから、その時の$ d $の条件を考えると、
 
 $$ \begin{aligned}
-\frac{2 \pi}{\lambda} d &= \frac{\pi}{2} + n \\\\
+\frac{2 \pi}{\lambda} d &= \frac{\pi}{2} + n\pi \\\\
 2d &= \lambda \( \frac{1}{2} + n \) \\\\
 &= \frac{\lambda}{2} \( 2n + 1 \)
 \end{aligned} $$
