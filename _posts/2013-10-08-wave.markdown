@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "波動"
-date:   2013-10-13 22:05:45
+date:   2013-11-6 22:05:45
 categories: jekyll update
 
 ---
@@ -28,7 +28,9 @@ $$ k = \frac{ 2 \pi }{ \lambda } $$
 
 と置き換えると、
 
-$$ f(t, x) = A sin[\frac{ 2 \pi }{ T } t - \frac{ 2 \pi }{ \lambda\_x }x - \frac{ 2 \pi }{ \lambda\_y }y - \frac{ 2 \pi }{ \lambda\_z }z -  + \theta_0] $$
+$$ f(t, x) = A sin[\omega t - k\_x x + \theta_0] $$
+
+$$ f(t, x, y) = A sin[\omega t - k\_x x - k\_y y + \theta_0] $$
 
 $$ f(t, x, y, z) = A sin[\omega t - k\_x x - k\_y y - k\_z z + \theta_0] $$
 
@@ -188,13 +190,13 @@ $$ f\_i = A\sin\[\omega t - kx\cos\alpha - ky\sin\alpha \] $$
 
 となる。同様に、屈折波の波の式を考えると、
 
-$$ f\_i = A\sin\[\omega t - k'x\cos\beta - ky'\sin\beta \] \(x >= 0\) $$
+$$ f\_i = A\sin\[\omega t - k'x\cos\beta - k'y\sin\beta \] \(x >= 0\) $$
 
 これで準備完了だ。この2波を、「境界面で位相がそろう」という条件で解き進めよう。媒質間の境界は本問では$x = 0$に設定しているから、
 
 $$\begin{aligned}
-\omega t - ky\sin\alpha &= \omega t - ky'\sin\beta \\\\
-ky\sin\alpha &= \ky'\sin\beta \\\\
+\omega t - ky\sin\alpha &= \omega t - k'y\sin\beta \\\\
+ky\sin\alpha &= k'y\sin\beta \\\\
 \frac{\sin\alpha}{\sin\beta} &= \frac{k'}{k} \\\\
 &= \frac{\frac{2\pi}{\lambda'}}{\frac{2\pi}{\lambda}} \\\\
 &= \frac{\lambda}{\lambda'}
@@ -215,9 +217,9 @@ $$ \frac{\sin\alpha}{\sin\beta} = \frac{\lambda}{\lambda'} = \frac{v}{v'}$$
 
 屈折の法則が、波の式から導き出せることが分かった。だが途中に興味深い式が現れている。
 
-$$ky\sin\alpha &= \ky'\sin\beta$$
+$$ky\sin\alpha = k'y\sin\beta$$
 
-これの意味は、「波長の、'境界面と平行な成分'は屈折前後で不変」という事である。境界面と垂直成分が変化することによって、角度が変わって屈折しているように見えるのだ。
+これの意味は、「波長の、『境界面と平行な成分』は屈折前後で不変」という事である。境界面と垂直成分が変化することによって、角度が変わって屈折しているように見えるのだ。
 
 ## ドップラー効果(観測者が動く場合)
 
@@ -260,6 +262,6 @@ f' &= f - \frac{v\_o}{\lambda} \\\\
 
 実は、波の式は「波動方程式」という微分方程式の解である。ここに波動方程式を示す。
 
-$$ \frac{d^2 f}{dx^2} + v^2 \frac{d^2 f}{dt^2} $$
+$$ \frac{d^2 f}{dx^2} + \frac{1}{v^2} \frac{d^2 f}{dt^2} = 0 $$
 
-波の式をこの微分方程式に代入して、方程式が成立する事を確認してほしい。$v$とは波の速度である。実は、波の性質は、実は波動方程式の解の性質なのだ。
+波の式をこの微分方程式に代入して、方程式が成立する事を確認してほしい。$v$とは波の速度である。実は、**波の性質は、波動方程式の解の性質なのだ。**
